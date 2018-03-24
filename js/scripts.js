@@ -1,7 +1,9 @@
-//check every element in an array is true
+//check if all elements in an array are true
+//aArray: generic array
+//bArray: all elements evaluate to be false
 var allTrue = function (aArray, bArray) {
 	aArray.forEach(function (value) {
-		if(value in bArray){
+		if (value in bArray) {
 			return false;
 		}
 	});
@@ -37,8 +39,8 @@ $().ready(function () {
 		$("#request-form").hide();
 		$("#output").show();
 
-		var emptyValue = [0, "null", undefined, "0","", " "];
-		if (allTrue(listValue, emptyValue)) {
+		var falseValue = [0, "null", undefined, "0", "", " "];
+		if (allTrue(listValue, falseValue)) {
 			listValue.forEach(function (item, index) {
 				var p = "<p class='lead'>" + listKey[index] + ": " + item + "</p>";
 				$("#output").append(p);
