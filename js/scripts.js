@@ -1,4 +1,3 @@
-
 // caculate tax rate
 var taxCaculator = function (state) {
 	var tax = 0.08;
@@ -38,14 +37,20 @@ $().ready(function () {
 		// 		break
 		// 	}
 		// });
-		for (var index = 0; index < listValue.length; index++){
-			if(listValue[index]){
+		for (var index = 0; index < listValue.length; index++) {
+			if (listValue[index]) {
 				var p = "<p class='lead'>" + listKey[index] + ": " + listValue[index] + "</p>";
 				$("#output").append(p);
-			}else{
-				$("#output").html("<p class='lead'>Please fill in all blanks.</p>");
+			} else {
+				$("#output").html("<p class='lead'>Please fill in all blanks.</p><button class='btn btn-outline-warning' id='back'>go back</button>");
 				break;
 			}
 		}
 	});
+
+	$("#back").click(function () {
+		$("#output").hide();
+		$("#request-form").show();
+	});
+
 });
