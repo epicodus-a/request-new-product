@@ -1,14 +1,3 @@
-//check if all elements in an array are true
-//aArray: generic array
-//bArray: all elements evaluate to be false
-var allTrue = function (aArray, bArray) {
-	aArray.forEach(function (value) {
-		if (value in bArray) {
-			return false;
-		}
-	});
-	return true;
-};
 
 // caculate tax rate
 var taxCaculator = function (state) {
@@ -39,15 +28,24 @@ $().ready(function () {
 		$("#request-form").hide();
 		$("#output").show();
 
-		var falseValue = [0, "null", undefined, "0", "", " "];
-		if (allTrue(listValue, falseValue)) {
-			listValue.forEach(function (item, index) {
-				var p = "<p class='lead'>" + listKey[index] + ": " + item + "</p>";
+		// listValue.forEach(function (item, index) {
+		// 	if (item) {
+		// 		var p = "<p class='lead'>" + listKey[index] + ": " + item + "</p>";
+		// 		$("#output").append(p);
+		// 	} else {
+		// 		// var p = "<p class='lead'>" + " Please enter all blanks." + "</p>";
+		// 		$("#output").html("<p>Please fill in all blanks.</p>");
+		// 		break
+		// 	}
+		// });
+		for (var index = 0; index < listValue.length; index++){
+			if(listValue[index]){
+				var p = "<p class='lead'>" + listKey[index] + ": " + listValue[index] + "</p>";
 				$("#output").append(p);
-			});
-		} else {
-			var p = "<p class='lead'>" + " Please enter all blanks." + "</p>";
-			$("#output").append(p);
+			}else{
+				$("#output").html("<p class='lead'>Please fill in all blanks.</p>");
+				break;
+			}
 		}
 	});
 });
