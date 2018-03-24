@@ -26,114 +26,108 @@
 </div>
 <!--hero ends-->
 <div class="container my-5">
-	<form id="contact-form">
-		<div class="row">
-			<h3 class="my-5 text-center">Contact Information</h3>
-		</div>
-		<div class="row">
-		<div class="col-12 col-md-6">
-			<div class="form-group">
-				<input type="text" class="form-control" placeholder="*First Name" required />
+	<form id="request-form">
+		<div id="contact">
+			<div class="row">
+				<h3 class="my-5 text-center">Contact Information</h3>
 			</div>
-		</div>
-			<div class="col-12 col-md-6">
-				<input type="text" name="lastname" placeholder="*Last Name" required class="form-control" />
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-12 col-md-6">
-				<div class="form-group">
-					<input type="email" class="form-control" name="email" placeholder="*Email" required />
+			<div class="row">
+				<div class="col-12 col-md-6">
+					<div class="form-group">
+						<input type="text" class="form-control" id="firstname" placeholder="*First Name" required/>
+					</div>
+				</div>
+				<div class="col-12 col-md-6">
+					<input type="text" id="lastname" placeholder="*Last Name" required class="form-control"/>
 				</div>
 			</div>
-			<div class="col-12 col-md-6">
-				<input type="text" name="phone" placeholder="Phone Number" required class="form-control" />
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-12 col-md-6">
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Street" name="street" required />
+			<div class="row">
+				<div class="col-12 col-md-6">
+					<div class="form-group">
+						<input type="text" class="form-control" id="email" placeholder="*Email" required/>
+					</div>
+				</div>
+				<div class="col-12 col-md-6">
+					<input type="text" id="phone" placeholder="Phone Number" required class="form-control"/>
 				</div>
 			</div>
-			<div class="col-12 col-md-6">
-				<input type="text" name="lastname" placeholder="City" name="city" required class="form-control" />
+			<!--products cat-->
+			<div class="row mt-5">
+				<h3 class="text-center">Please check the product of interest</h3>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-12 col-md-6">
-				<div class="form-group">
-					<input type="text" class="form-control" name="state" placeholder="State" required />
+			<div class="row">
+				<div class="form-check form-check-inline col-12 col-md-3">
+					<input class="form-check-input" type="radio" name="cat" id="cat1" value="milk-powder">
+					<label class="form-check-label" for="cat1">Milk Powder</label>
+				</div>
+				<div class="form-check form-check-inline col-12 col-md-4">
+					<input class="form-check-input" type="radio" name="cat" id="cat2" value="perfume">
+					<label class="form-check-label" for="cat2">Perfume</label>
+				</div>
+				<div class="form-check form-check-inline col-12 col-md-4">
+					<input class="form-check-input" type="radio" name="cat" id="cat3" value="graphic-cards">
+					<label class="form-check-label" for="cat3">Graphic Cards</label>
+				</div>
+			</div><!--product cat ends-->
+			<!--product brand start-->
+			<div class="row mt-5">
+				<h3 class="text-center">Please choose your brands</h3>
+			</div>
+			<div class="row">
+				<div class="form-group col-12 col-md-12">
+					<label for="brands"></label>
+					<select multiple class="form-control" id="brands">
+						<option>Mayenburg</option>
+						<option>NESTLE</option>
+						<option>GUCCI</option>
+						<option>Nvida</option>
+						<option>AMD</option>
+					</select>
 				</div>
 			</div>
-			<div class="col-12 col-md-6">
-				<input type="text" name="zip" placeholder="Zip" required class="form-control" />
+			<!--product location start-->
+			<div class="row mt-5">
+				<h3 class="text-center">Please choose manufacture location</h3>
 			</div>
-		</div><!--contact info ends-->
-	<!--products cat-->
-		<div class="row mt-5">
-			<h3 class="text-center">Please check the product of interest</h3>
-		</div>
-		<div class="row">
-			<div class="form-check form-check-inline col-12 col-md-3">
-				<input class="form-check-input" type="radio" name="cat1" id="cat1" value="option1">
-				<label class="form-check-label" for="cat1">Milk Powder</label>
+			<div class="row">
+				<div class="form-check form-check-inline col-12 col-md-3">
+					<input class="form-check-input" type="radio" name="location" id="location1" value="oregon">
+					<label class="form-check-label" for="location1">Oregon</label>
+				</div>
+				<div class="form-check form-check-inline col-12 col-md-4">
+					<input class="form-check-input" type="radio" name="location" id="location2" value="new-york">
+					<label class="form-check-label" for="location2">New York</label>
+				</div>
+				<div class="form-check form-check-inline col-12 col-md-4">
+					<input class="form-check-input" type="radio" name="location" id="location13" value="hawaii">
+					<label class="form-check-label" for="location13">Hawaii</label>
+				</div>
+			</div><!--product location ends-->
+			<!--message start-->
+			<div class="row my-5">
+				<h3>Leave us a message</h3>
+				<div class="form-group col-12">
+					<textarea class="form-control" placeholder="Message" id="message" rows="3"></textarea>
+				</div>
 			</div>
-			<div class="form-check form-check-inline col-12 col-md-4">
-				<input class="form-check-input" type="radio" name="cat2" id="cat2" value="option2">
-				<label class="form-check-label" for="cat2">Perfume</label>
+			<!--message ends-->
+			<div class="text-center my-4">
+				<button class="btn btn-outline-danger btn-lg px-4" type="submit">submit</button>
 			</div>
-			<div class="form-check form-check-inline col-12 col-md-4">
-				<input class="form-check-input" type="radio" name="cat3" id="cat3" value="option3">
-				<label class="form-check-label" for="cat3">Graphic Cards</label>
-			</div>
-		</div><!--product cat ends-->
-		<!--product brand start-->
-		<div class="row mt-5">
-			<h3 class="text-center">Please choose your brands</h3>
-		</div>
-		<div class="row">
-			<div class="form-group col-12 col-md-12">
-				<label for="brands"></label>
-				<select multiple class="form-control" id="brands">
-					<option>Mayenburg</option>
-					<option>NESTLE</option>
-					<option>GUCCI</option>
-					<option>Nvida</option>
-					<option>AMD</option>
-				</select>
-			</div>
-		</div>
-		<!--product location start-->
-		<div class="row mt-5">
-			<h3 class="text-center">Please choose manufacture location</h3>
-		</div>
-		<div class="row">
-			<div class="form-check form-check-inline col-12 col-md-3">
-				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-				<label class="form-check-label" for="inlineRadio1">Oregon</label>
-			</div>
-			<div class="form-check form-check-inline col-12 col-md-4">
-				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-				<label class="form-check-label" for="inlineRadio2">New York</label>
-			</div>
-			<div class="form-check form-check-inline col-12 col-md-4">
-				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-				<label class="form-check-label" for="inlineRadio3">Hawaii</label>
-			</div>
-		</div><!--product location ends-->
-		<!--message start-->
-		<div class="row my-5">
-			<h3>Leave us a message</h3>
-			<div class="form-group col-12">
-				<textarea class="form-control" placeholder="Message" rows="3"></textarea>
-			</div>
-		</div>
-		<!--message ends-->
-		<div class="text-center my-4">
-			<button class="btn btn-outline-danger btn-lg px-4" type="submit">submit</button>
 		</div>
 	</form>
+	<!--output starts-->
+	<div id="output" class="my-5">
+		<h3 class="mb-4">Please confirm your request as below:</h3>
+		<p class="lead"></p>
+		<p class="lead"></p>
+		<p class="lead"></p>
+		<p class="lead"></p>
+		<p class="lead"></p>
+		<p class="lead"></p>
+		<p class="lead"></p>
+		<p class="lead"></p>
+	</div>
 </div>
 
 <!-- Optional JavaScript -->
