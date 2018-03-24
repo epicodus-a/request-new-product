@@ -14,7 +14,7 @@ _By Adriana_
 - run index.html 
 
 ### Known Bugs
-- N/A
+- failed to catch the empty values
 
 ### Support and contact details
 
